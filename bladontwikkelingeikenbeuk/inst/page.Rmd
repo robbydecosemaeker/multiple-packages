@@ -24,6 +24,15 @@ Het uitlopen van zowel eik als beuk verloopt vroeger in warme jaren dan in koude
 Deze indicator bespreekt de evolutie van het begin en het einde van de bladontplooiing van eik en beuk. Sinds 2002 wordt door het INBO fenologische opnames gedaan in Meerdaalwoud en Zoniënwoud. Voor deze indicator analyseren we de evolutie in de tijd van de dag waarop de bomen beginnen in blad te komen en de dag waarop ze volledig in blad staan.
 
 ## Grafiek
+```{r, include=FALSE}
+# cfr. https://www.inbo.be/nl/natuurindicator/bladontwikkeling-eik-en-beuk
+library(ggplot2)
+library(dplyr)
+#library(INBOtheme)
+library(tidyr)
+
+df <- read.csv("../inst/data/data_bladontwikkeling_beuk.csv", sep='\t')
+```
 
 ## Grafiek Trend Beuk
 
