@@ -68,3 +68,8 @@ blad volledig ontplooid beuk
 
 * Streefdoel 2 EU 2020 biodiversiteitsstrategie:Tegen 2020 worden ecosystemen en ecosysteemdiensten gehandhaafd en verbeterd door groene infrastructuur op te zetten en ten minste 15 % van de aangetaste ecosystemen te herstellen.
 * Lange termijndoelstelling MINA-plan 4 :Bewaren van de biodiversiteit en de integriteit van ecosystemen: impact op natuur als gevolg van klimaatwijziging.
+
+## Data
+```{r, echo=TRUE}
+df
+```
