@@ -24,19 +24,14 @@ Het uitlopen van zowel eik als beuk verloopt vroeger in warme jaren dan in koude
 Deze indicator bespreekt de evolutie van het begin en het einde van de bladontplooiing van eik en beuk. Sinds 2002 wordt door het INBO fenologische opnames gedaan in Meerdaalwoud en Zoniënwoud. Voor deze indicator analyseren we de evolutie in de tijd van de dag waarop de bomen beginnen in blad te komen en de dag waarop ze volledig in blad staan.
 
 ## Grafiek
+```{r, include=FALSE}
+# cfr. https://www.inbo.be/nl/natuurindicator/bladontwikkeling-eik-en-beuk
+library(ggplot2)
+library(dplyr)
+#library(INBOtheme)
+library(tidyr)
 
-```{r, echo=FALSE, fig.width=9, fig.height=14}
-
-ontplooing.per.jaar <- gather(df,
-                           value = "value",
-                           key = "type",
-                           begin.bladontplooiing, blad.volledig.ontplooid)
-	   
-ggplot(ontplooing.per.jaar, aes(x=jaar, y=value , color=type, group=type))+
-    geom_line() +
-    expand_limits(y=0)
-
-	
+df <- read.csv("../inst/data/data_bladontwikkeling_beuk.csv", sep='\t')
 ```
 
 ## Grafiek Trend Beuk
@@ -51,6 +46,7 @@ ggplot(ontplooing.per.jaar, aes(x=jaar, y=value , color=type, group=type))+
 ## Bespreking
 
 Klimaatverandering heeft een impact op de biodiversiteit, die zich o.a. uit in temporele verandering, bv. fenologie. Het uitlopen van zowel eik als beuk verloopt vroeger in warme jaren dan in koude. Bij verdere opwarming vervroegt en verlengt het groeiseizoen van bomen hierdoor. Er zijn echter grote jaarlijkse schommelingen die gelinkt kunnen worden aan de voorjaarstemperatuur. Bladontwikkeling bij eik begint half april. Dit gebeurde in de observatieperiode nagenoeg op hetzelfde moment, maar in 2007 (warm voorjaar) was dat 10 dagen vroeger. In jaren met een kouder voorjaar zoals 2006 en 2013 was dit eind april tot begin mei.
+
 Het beeld voor beuk is vrij gelijkaardig, maar de bladontwikkeling gebeurt sneller. Ook bij beuk begon bladontwikkeling het vroegst in 2007 en was het laatst ontwikkeld in 2013. De verschillen zijn echter kleiner dan bij eik. Door verdere opwarming komen bomen steeds vroeger in blad. Hierdoor verlengt het groeiseizoen en kunnen bomen meer groeien. Dit lijkt op het eerste gezicht positief, maar het is onduidelijk wat dit betekent voor de boomvitaliteit. Het huidige groeiritme is immers met vele organismen afgestemd. Wijzigende boomfenologie kan bijdragen tot het al dan niet voorkomen van insectenplagen of ziekten.
 
 ## Trends
