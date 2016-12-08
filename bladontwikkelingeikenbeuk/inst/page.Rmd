@@ -1,9 +1,9 @@
 ---
-title: "Bladontwikkeling eik en beuk"
+title: "Bladontwikkeling Eik en Beuk"
 author: "Robby Decosemaeker"
 date: "December 8, 2016"
 output: html_document
-keyword: visualisation, nara, indicators
+keyword: visualisation, indicators
 ---
 
 
